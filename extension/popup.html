@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tab MP3 Recorder</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 12px; min-width: 260px; }
+      .row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+      button { padding: 6px 10px; }
+      .status { font-size: 12px; color: #555; }
+      label { font-size: 12px; }
+      input[type="text"] { width: 100%; }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <button id="startBtn">Avvia</button>
+      <button id="stopBtn" disabled>Stop</button>
+    </div>
+    <div class="row">
+      <label for="bitrate">Bitrate MP3 (kbps)</label>
+      <select id="bitrate">
+        <option>96</option>
+        <option selected>128</option>
+        <option>160</option>
+        <option>192</option>
+        <option>256</option>
+        <option>320</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="filename">Nome file</label>
+      <input id="filename" type="text" value="tab-audio.mp3" />
+    </div>
+    <div class="status" id="status">Pronto</div>
+    <script src="popup.js"></script>
+  </body>
+  </html>
+

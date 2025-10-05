@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Audio MP3 Recorder",
+  "description": "Registra l'audio della tab attiva e salva in MP3",
+  "version": "0.1.0",
+  "permissions": [
+    "tabCapture",
+    "downloads",
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "Tab MP3 Recorder",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

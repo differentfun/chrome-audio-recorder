@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tab MP3 Recorder</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 12px; }
+      .row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+      .status { font-size: 12px; color: #555; }
+      button { padding: 6px 10px; }
+      .small { font-size: 11px; color: #777; }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <button id="stop">Stop</button>
+      <div class="status" id="status">Inizializzazione…</div>
+    </div>
+    <div class="row">
+      <label><input type="checkbox" id="monitorToggle" checked> Ascolta durante la registrazione</label>
+    </div>
+    <div class="small">Questa finestra può restare in background.</div>
+    <audio id="monitor" autoplay></audio>
+    <script src="lib/lame.min.js"></script>
+    <script src="recorder.js"></script>
+  </body>
+  </html>
